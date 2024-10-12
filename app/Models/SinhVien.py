@@ -1,5 +1,5 @@
 class SinhVien:
-    def __init__(self,_id, ma_sv, ten_sv, tuoi, ngay_sinh, so_dien_thoai, dia_chi, ma_lop, create_date, create_by, last_update_date, last_update_by):
+    def __init__(self, ma_sv, ten_sv, tuoi, ngay_sinh, so_dien_thoai, dia_chi, ma_lop, create_date, create_by, last_update_date, last_update_by, _id =None):
         self._id = _id
         self.ma_sv = ma_sv
         self.ten_sv = ten_sv
@@ -15,7 +15,7 @@ class SinhVien:
 
     def to_dict(self):
         return {
-            "_id":str(self._id),
+            "_id":self._id,
             "ma_sv": self.ma_sv,
             "ten_sv": self.ten_sv,
             "tuoi": self.tuoi,
