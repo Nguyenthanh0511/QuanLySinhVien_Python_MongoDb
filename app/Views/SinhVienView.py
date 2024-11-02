@@ -6,7 +6,7 @@ class SinhVienView:
         pass
 
     def ShowSinhVien(self, sinhVienLists):
-        headers = ["MaSv", "HoTen", "GioiTinh", "NgaySinh", "DiaChi", "Sdt", "MaLop"]
+        headers = ["MaSv", "HoTen", "GioiTinh", "NgaySinh", "DiaChi", "Sdt", "MaLop", "MaNH", "DiemRenLuyen"]
         print("|", end="")
         for header in headers:
             print(f"{header:20}|", end="")
@@ -33,7 +33,8 @@ class SinhVienView:
         so_dien_thoai = input("Enter Sdt: ")
         dia_chi = input("Enter DiaChi: ")
         ma_lop = input("Enter MaLop: ")
-
+        ma_NH = input("Enter MaNH: ")
+        diem_ren_luyen = input("Enter DiemRenLuyen: ")
         sinhVienData = {
             "MaSv": ma_sv,
             "HoTen": ten_sv,
@@ -42,6 +43,8 @@ class SinhVienView:
             "DiaChi": dia_chi,
             "Sdt": so_dien_thoai,
             "MaLop": ma_lop,
+            "MaNH": ma_NH,
+            "DiemRenLuyen": diem_ren_luyen,
         }
         sinhVien = SinhVien(**sinhVienData).to_dict()
         return sinhVien

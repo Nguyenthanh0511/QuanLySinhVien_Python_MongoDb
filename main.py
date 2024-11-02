@@ -70,5 +70,5 @@ if __name__ == "__main__":
                 sinhViens.CreateSinhVien()
             elif numberChoiceChild == "2":
                 sinhViens.GetAll()
-            elif numberChoiceChild == "6":
-                nghanhHocs.GenDataNghanhHoc(10)
+            # elif numberChoiceChild == "6":
+            #     nghanhHocs.GenDataNghanhHoc(10)
